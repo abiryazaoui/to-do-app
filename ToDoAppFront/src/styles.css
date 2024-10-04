@@ -1,1 +1,149 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+    --success-color: #55efc4;
+    --card-bg-color: rgba(30, 30, 30, 0.85); 
+    --text-color-dark: #2d3436;
+    --text-color-light: #ffffff;
+    --primary-color: #6c5ce7;
+    --secondary-color: #74b9ff;
+    --background-color: #151515;
+    --input-border-color: #dfe6e9;
+    --error-color: #ff7675;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', "Helvetica Neue", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color-light);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom right, #0b0b0b, #2d3436);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5e50db;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #5e50db;
+    transform: scale(1.05); 
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5), 
+                 0px 0px 10px rgba(108, 92, 231, 0.7); 
+    color: #fff;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+    color: var(--text-color-light);
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color-light);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(108, 92, 231, 0.7); 
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+.google_translate_element {
+    position: fixed; /* Fixes the position */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 1000; /* Ensures it appears above other elements */
+  }
+
+
+
+
+    
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
