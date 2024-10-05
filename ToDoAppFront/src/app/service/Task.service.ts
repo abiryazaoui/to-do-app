@@ -20,5 +20,7 @@ export class taskService {
         return this.httpClient.post<Task>(this.URL,task)
     }
 
-}
+    editTask(task:Task):Observable<Task>{
+        return this.httpClient.put<Task>(this.URL,task)
+    }}
 

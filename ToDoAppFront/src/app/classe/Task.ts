@@ -7,7 +7,7 @@ export class Task {
         public description: String,
         public status:TaskStatus,
         public deadline: Date,
-        public isDestactive: boolean,
+        public isDestactive?: boolean,
         public createdAt?: Date, 
         public updatedAt?: Date,
      ) {}

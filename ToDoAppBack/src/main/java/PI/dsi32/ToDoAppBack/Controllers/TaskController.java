@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,6 +41,17 @@ public class TaskController {
         	task.setCreatedAt(LocalDateTime.now());
             Task newTask = taskService.addTask(task);
             return new ResponseEntity<>(newTask, HttpStatus.CREATED);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    
+    @PutMapping()
+    public ResponseEntity<Task> updateTask(@RequestBody Task task) {
+        try {
+        	task.setUpdatedAt(LocalDateTime.now());
+            Task updatedTask = taskService.editTask(task);
+            return new ResponseEntity<>(updatedTask, HttpStatus.OK);
         } catch (RuntimeException e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }

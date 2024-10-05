@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import PI.dsi32.ToDoAppBack.Entities.Task;
 
 @Repository
-public interface EntityRepository extends JpaRepository<Task, Integer> {
+public interface TaskRepository extends JpaRepository<Task, Integer> {
 
 }

@@ -1,42 +1,38 @@
 <div class="container mt-4">
-    <h1 class="text-center">Your To Do List</h1>
-  
-    <div class="kanban-board">
-      <div class="kanban-column" (dragover)="onDragOver($event)" (drop)="onDrop($event, TaskStatus.todo)">
-        <div class="kanban-header">
-          To Do
-          <button class="btn btn-primary btn-sm ms-2 table-add">+</button>
-        </div>
-        <div class="kanban-body">
-          <div class="kanban-item" *ngFor="let task of todolist" 
-               draggable="true" (dragstart)="onDragStart(task)">
-            {{ task.title }}
-          </div>
-        </div>
+  <h1 class="text-center">Your To Do List</h1>
+
+  <div class="kanban-board">
+    <div class="kanban-column" (dragover)="onDragOver($event)" (drop)="onDrop($event, TaskStatus.todo)">
+      <div class="kanban-header">
+        To Do
+        <button class="btn btn-primary btn-sm ms-2 table-add" (click)="navigateToFormTask()">+</button>
       </div>
-    
-      <div class="kanban-column" (dragover)="onDragOver($event)" (drop)="onDrop($event, TaskStatus.inprogress)">
-        <div class="kanban-header">In Progress</div>
-        <div class="kanban-body">
-          <div class="kanban-item" *ngFor="let task of inProgressList" 
-               draggable="true" (dragstart)="onDragStart(task)">
-            {{ task.title }}
-          </div>
-        </div>
-      </div>
-    
-      <div class="kanban-column" (dragover)="onDragOver($event)" (drop)="onDrop($event, TaskStatus.done)">
-        <div class="kanban-header">Done</div>
-        <div class="kanban-body">
-          <div class="kanban-item" *ngFor="let task of doneList" 
-               draggable="true" (dragstart)="onDragStart(task)">
-            {{ task.title }}
-          </div>
+      <div class="kanban-body">
+        <div class="kanban-item" *ngFor="let task of todolist" 
+             draggable="true" (dragstart)="onDragStart(task)">
+          {{ task.title }}
         </div>
       </div>
     </div>
-</div>
-
-    
   
- 
+    <div class="kanban-column" (dragover)="onDragOver($event)" (drop)="onDrop($event, TaskStatus.inprogress)">
+      <div class="kanban-header">In Progress</div>
+      <div class="kanban-body">
+        <div class="kanban-item" *ngFor="let task of inProgressList" 
+             draggable="true" (dragstart)="onDragStart(task)">
+          {{ task.title }}
+        </div>
+      </div>
+    </div>
+  
+    <div class="kanban-column" (dragover)="onDragOver($event)" (drop)="onDrop($event, TaskStatus.done)">
+      <div class="kanban-header">Done</div>
+      <div class="kanban-body">
+        <div class="kanban-item" *ngFor="let task of doneList" 
+             draggable="true" (dragstart)="onDragStart(task)">
+          {{ task.title }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,8 @@ public interface ITaskService {
     List<Task> getAllTasks();
     
     Task addTask(Task task);
+    
+    Task editTask(Task task);
 
 
 }
