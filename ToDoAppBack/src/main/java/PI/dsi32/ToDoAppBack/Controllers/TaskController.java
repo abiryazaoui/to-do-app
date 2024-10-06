@@ -1,12 +1,12 @@
 package PI.dsi32.ToDoAppBack.Controllers;
 import java.time.LocalDateTime;
-// Importation de la classe LocalDateTime
+// importation de la classe LocalDateTime
 import java.util.List;
 // Importation de la classe List
 import org.springframework.beans.factory.annotation.Autowired;
 // Annotation pour l'injection de dépendance
 import org.springframework.http.HttpStatus;
-// Importation de la classe HttpStatus
+// importation de la classe HttpStatus
 import org.springframework.http.ResponseEntity;
 // Importation de la classe ResponseEntity
 import org.springframework.web.bind.annotation.CrossOrigin;
